@@ -54,6 +54,8 @@ create table t_data_last_ins_info
     car_enroll_date varchar(50) comment '车辆初等日期',
     car_frame_no varchar(50) comment '车架号',
     car_license_no varchar(50) comment '车牌号',
+    displacement varchar(50) comment '排量',
+
     car_purchase_premium varchar(50) comment '新车购置价',
     ci_end_date varchar(50) comment '交强险到期日',
     bi_end_date varchar(50) comment '商业险到期日',
@@ -75,7 +77,7 @@ create table t_data_last_ins_kind_premium
     kind_code varchar(255)  comment '险种代码',
     kind_name varchar(255)  comment '险种名称',
     premium varchar(255)  comment '险种费用',
-
+    discount varchar(255) comment '折扣',
     change_time datetime null,
     changer varchar(255) null,
     create_time datetime null,
@@ -89,7 +91,7 @@ create table t_data_last_ins_kind_premium
 select * from t_req_cfg;
 update t_req_cfg set content_type='application/x-www-form-urlencoded';
 
-insert into t_req_cfg(uri,param,method,cookie)
+insert into ins_octopus.t_req_cfg(uri,param,cookie)
 values ('/khyx/qth/price/quoteRenew.do','lastPolicyNo=PDAA201951010000521345&engineNo4Renew1=&frameNo4Renew1=065494&licenseNo4Renew=&licenseType4Renew=02&engineNo4Renew2=&frameNo4Renew2=&frameNo4Renew3=&isOwner=false&isQuoteRenewByLicenseNo=1'
 ,'GET','UE85OlEqAK14WIm1SiOkmyUrawv24M24xnfG5kZQgER6M68h5ZW0!-1124165325'
 );

@@ -17,4 +17,6 @@ public class DataLastInsKindPremium extends  BaseEntity{
     private String kindName;
     /**险种费用*/
     private String premium;
+
+    private String discount;
 }

@@ -35,4 +35,6 @@ public class DataLastInsInfo extends  BaseEntity{
     private String biEndDate     ;
     /**返回结果*/
     private String context;
+    /**排量*/
+    private String displacement;
 }

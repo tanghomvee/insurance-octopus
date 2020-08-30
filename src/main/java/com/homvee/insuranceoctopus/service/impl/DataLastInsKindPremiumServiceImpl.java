@@ -74,6 +74,7 @@ public class DataLastInsKindPremiumServiceImpl  extends AbstractDataService impl
             kindPremium.setKindCode(kindJSON.getString("kindCode"));
             kindPremium.setKindName(kindJSON.getString("kindName"));
             kindPremium.setPremium(kindJSON.getString("premium"));
+            kindPremium.setDiscount(kindJSON.getString("discount"));
         }
         return  kindPremiums;
     }
@@ -84,6 +85,7 @@ public class DataLastInsKindPremiumServiceImpl  extends AbstractDataService impl
         dataLastInsInfo.setCarFrameNo(car.getString("frameNo"));
         dataLastInsInfo.setCarLicenseNo(car.getString("licenseNo"));
         dataLastInsInfo.setCarPurchasePremium(car.getString("purchasePrice"));
+        dataLastInsInfo.setDisplacement(car.getString("displacement"));
     }
 
     private void makeOwnerInfo(DataLastInsInfo dataLastInsInfo, JSONObject owner) {
