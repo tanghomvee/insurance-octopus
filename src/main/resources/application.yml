@@ -1,0 +1,31 @@
+server:
+  port: 80
+
+spring:
+  mvc:
+    static-path-pattern: '/static/**'
+    view:
+#      prefix: '/static'
+      suffix: '.html'
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://116.62.11.143:3306/ins_octopus?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1:3306/ins_octopus?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: '!QAZ2wsx'
+
+
+logging:
+  level:
+    root: info
+
+task:
+  #间隔5分钟
+  cron: 0 */1 * * * ?
