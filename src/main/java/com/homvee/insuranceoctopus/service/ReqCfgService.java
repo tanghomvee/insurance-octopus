@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ReqCfgService {
 
-    List<ReqCfg> findByState(StateEnum state);
+    List<ReqCfg> findByState(StateEnum state, Integer start);
 
     Integer updateStateById(String state, Long id);
 }

@@ -17,8 +17,8 @@ public class ReqCfgServiceImpl implements ReqCfgService {
     private ReqCfgDao reqCfgDao;
 
     @Override
-    public List<ReqCfg> findByState(StateEnum state) {
-        return reqCfgDao.findByStateAndYn(state.name() , YNEnum.YES.getVal());
+    public List<ReqCfg> findByState(StateEnum state, Integer start) {
+        return reqCfgDao.findByStateAndYn(state.name() , YNEnum.YES.getVal() , start);
     }
 
     @Transactional(rollbackFor = Exception.class)

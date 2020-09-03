@@ -16,8 +16,8 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://116.62.11.143:3306/ins_octopus?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=Asia/Shanghai
-    url: jdbc:mysql://127.0.0.1:3306/ins_octopus?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://116.62.11.143:3306/ins_octopus?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=Asia/Shanghai
+#    url: jdbc:mysql://127.0.0.1:3306/ins_octopus?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: '!QAZ2wsx'
 

@@ -9,7 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface ReqCfgDao extends JpaRepository<ReqCfg, Long>  {
-    List<ReqCfg> findByStateAndYn(String state, Integer yn);
+    @Query(value = "select * from t_req_cfg  where state=?1 and yn=?2 limit ?3,100" , nativeQuery = true)
+    List<ReqCfg> findByStateAndYn(String state, Integer val, Integer start);
 
     @Transactional
     @Modifying
